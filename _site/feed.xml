@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-05-01T04:31:39+05:30</updated><id>/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of commiter on Git</title><link href="/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of commiter on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>/2022/05/01/GitChangeName</id><content type="html" xml:base="/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-05-01T04:49:10+05:30</updated><id>/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of commiter on Git</title><link href="/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of commiter on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>/2022/05/01/GitChangeName</id><content type="html" xml:base="/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
 
 <p>Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.</p>
 
 <h2 id="fix">Fix</h2>
 
-<p><strong>Note of caution: It will change all the commit SHA1s.</strong></p>
+<p><em>Note of caution: This script will change SHA1s for all previous commits.</em></p>
 
 <p>Create a shell script with +x permissions</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
  
-git filter-branch --env-filter '
+git filter-branch -f --env-filter '
  
 an="$GIT_AUTHOR_NAME"
 am="$GIT_AUTHOR_EMAIL"
@@ -35,12 +35,15 @@ export GIT_COMMITTER_EMAIL=$cm
 '
 </code></pre></div></div>
 
-<p>Once done, run</p>
+<p>Once done, run the push command to update origin. Please note that this will override the origin</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin +main
 </code></pre></div></div>
 
-<p>Source: https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc</p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>/2022/05/01/Blog_todo</id><content type="html" xml:base="/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
+<p>Source(s): 
+<a href="https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc">1</a>
+<a href="https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails">2</a>
+<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>/2022/05/01/Blog_todo</id><content type="html" xml:base="/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
 
 <ol>
   <li>Webring integration</li>

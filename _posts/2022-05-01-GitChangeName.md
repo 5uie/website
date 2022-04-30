@@ -12,14 +12,14 @@ Problem with wrong names for committer or author on git for a number of commits?
 
 ## Fix
 
-**Note of caution: It will change all the commit SHA1s.**
+*Note of caution: This script will change SHA1s for all previous commits.*
 
 Create a shell script with +x permissions
 
 ```
 #!/bin/sh
  
-git filter-branch --env-filter '
+git filter-branch -f --env-filter '
  
 an="$GIT_AUTHOR_NAME"
 am="$GIT_AUTHOR_EMAIL"
@@ -44,11 +44,13 @@ export GIT_COMMITTER_EMAIL=$cm
 '
 ```
 
-Once done, run 
+Once done, run the push command to update origin. Please note that this will override the origin
 
 ```
 git push origin +main
 ```
 
-Source: https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc
-
+Source(s): 
+[1](https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc)
+[2](https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails)
+[3](https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith)

@@ -1,10 +1,22 @@
+# Jekyll
 .jekyll-cache/
 .sass-cache/
 .jekyll-metadata
+_site/
 
+# Ruby
 .bundle/
 vendor/
 
-_site/
-
+# Vim
 .swp
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
