@@ -79,6 +79,19 @@ nav a:not(:last-of-type) {
   margin-right: 1.5vw;
 }
 
+/* ------- Footer -------- */
+
+footer {
+display: flex;
+flex-wrap: wrap;
+position: relative;
+padding: ;
+padding-left: 40%;
+padding-right: 40%;
+margin-top: 90%;
+font-size: 10px;
+}
+
 /* ------- General ------- */
 
 a {
