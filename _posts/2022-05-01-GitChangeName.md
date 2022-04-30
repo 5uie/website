@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fixing details of commiter on Git"
+title:  "Fixing details of committer on Git"
 date: 2022-05-01 04:21:00 +0530
 tags: git commit authorship
 blurb: A small hack using filter-branch to fix committer/author details on git
@@ -44,7 +44,7 @@ export GIT_COMMITTER_EMAIL=$cm
 '
 ```
 
-Once done, run the push command to update origin. Please note that this will override the origin
+Once done, run the push command to update origin. Please note that this will override SHA1s irrevocably at origin
 
 ```
 git push origin +main
