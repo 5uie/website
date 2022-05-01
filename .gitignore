@@ -20,3 +20,6 @@ vendor/
 auto-save-list
 tramp
 .\#*
+
+# MacOSX
+.DS_Store

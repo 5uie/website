@@ -304,7 +304,6 @@ a:before {
 /* Add more filetypes here if you want */
 
 a[href$=".pdf"]:before { content: "PDF"; }
-a[href$=".txt"]:before { content: "TXT"; }
 a[href$=".mp3"]:before { content: "MP3"; }
 a[href$=".jpeg"]:before,
 a[href$=".jpg"]:before,

@@ -13,6 +13,7 @@ layout: default
 	    <li>Eco-friendly</li>
 	    <li>Inclusive community</li>
 	</ul>
+
 </section>
 
 <section id="about"> 
@@ -24,8 +25,15 @@ layout: default
 	    <li>Matrix: <a href="https://matrix.to/#/@5uie1:matrix.org">@5uie1:matrix.org</a></li>
 	    <li>Github: <a href="https://github.com/5uie">5uie@github.com</a></li>
 	    <li>Sourcehut: <a href="https://sr.ht/~fui/">fui@sr.ht</a></li>
+      <li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#53;&#117;&#105;&#101;&#49;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;">Address</a> &amp; <a href="/publickey.txt">PGP</a></li>
 	</ul>
-  <p>This site has an <a href="/feed.xml">Atom feed</a> and the <a href="/sitemap.xml">sitemap</a> is available too.</p>
+  <p>Site details</p>
+  <ul>
+    <li>Feed: <a href="/feed.xml">Atom Feed</a></li>
+    <li>Sitemap: <a href="/sitemap.xml">XML</a></li>
+    <li>Source: <a href="https://github.com/5uie/website">GitHub</a></li>
+   </ul>
+
     <h2>Colophon</h2>
     <p>This site has been <a href="https://validator.w3.org/nu/?doc=https://5uie1.netlify.app">validated</a> to be HTML5 safe. Please see why it is important to validate <a href="https://validator.w3.org/docs/why.html">here</a>, <a href="https://universaldesign.ie/technology-ict/web-accessibility-techniques1/developer-s-introduction-and-index/dev-7-–-code-according-to-best-practices/dev-7-1-–-use-structural-and-semantic-markup-properly-and-validate-code/">here</a> and <a href="https://stackoverflow.com/questions/7940/how-important-is-w3c-xhtml-css-validation-when-finalizing-work">here</a>.</p>
     <p>This site has been built to ensure low load times, it is based on the <a href="https://github.com/bradleytaunt/john-doe-jekyll">John Doe Template</a> and is hugely inspired by <a href="https://10kbclub.com/">10kb Club</a>'s ideas of a quicker, simpler web.</p> 
@@ -34,12 +42,19 @@ layout: default
 
 <section id="blog"> 
     <h2>Articles</h2>
-    I hope to document this journey through a series of posts here.
+    <p>I hope to document this journey through a series of posts here.</p>
+    <br>
     <article>
-    <h3> List of posts </h3>
     {% for post in site.posts %}
-	<a href="{{ post.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%e %B, %Y" }}</time><br><span class="blurb">{{ post.blurb }}</span><br><span class="tags">{{ post.tags | sort | join: ", " }}</span><br><br>
+    <a href="{{ post.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%e %B, %Y" }}</time><br><span class="blurb">{{ post.blurb }}</span><br><span class="tags">{{ post.tags | sort | join: ", " }}</span><br><br>
     {% endfor %}
     </article>
-</section>
 
+  <h2>All Tags</h2>
+    <p class="tags">
+    {% for tag in site.tags %}
+      {% assign t = tag | first %}
+      <span style="padding-right:2em;">{{ t | downcase }}</span> 
+    {% endfor %}
+    </p>
+</section>
