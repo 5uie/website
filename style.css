@@ -28,12 +28,19 @@ body {
 }
 
 .blurb {
-  padding-left: 4vh;
+  padding-left: 2vh;
+  font-style: italic;
 }
 
 .tags {
   font-size: 0.8em;
-  padding-left: 4vh;
+  font-variant: small-caps;
+  font-weight: lighter;
+}
+
+.modified_date {
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 680px) { /* smaller screens */
@@ -276,6 +283,7 @@ section:target iframe {
 
 a[href*="//"]:after { 
   font-weight: 300;
+  font-size: 0.5em;
   content: "\2197"; /* top right arrow: ↗ */
   color: var(--textcolor);
   opacity: .25;
