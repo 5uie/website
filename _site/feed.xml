@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-05-01T18:16:27+05:30</updated><id>/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of committer on Git</title><link href="/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>/2022/05/01/GitChangeName</id><content type="html" xml:base="/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-01T19:20:13+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
 
 <p>Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.</p>
 
@@ -43,14 +43,14 @@ export GIT_COMMITTER_EMAIL=$cm
 <p>Source(s): 
 <a href="https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc">1</a>
 <a href="https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails">2</a>
-<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>/2022/05/01/Blog_todo</id><content type="html" xml:base="/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
+<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
 
 <ol>
   <li>Webring integration</li>
   <li>Tildeverse documentation</li>
   <li>Search plugins</li>
-  <li>Sitemap links</li>
-  <li><del>W3C Validation</del> <em>1st May 2022</em></li>
+  <li><del>Sitemap links</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
+  <li><del>W3C Validation</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li>Re-organise About page</li>
   <li>Clickable tags in blog listing page</li>
   <li>Fix footer</li>
@@ -61,10 +61,11 @@ export GIT_COMMITTER_EMAIL=$cm
       <li>https://github.com/envygeeks/jekyll-assets</li>
     </ul>
   </li>
-  <li>Create readme and re-organise blog files</li>
+  <li><del>Create readme and re-organise blog files</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li>Port to Sourcehut</li>
-  <li>Handcraft stylesheet and low footprint version of Jekyll.</li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="webring" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>/2022/05/01/Ahoy</id><content type="html" xml:base="/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
+  <li>Handcraft stylesheet and low footprint version of Jekyll</li>
+  <li><del>Create usable feed</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="webring" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
 
 <p>After much dithering, I have finally found the time to setup a place to keep track of my use of new tools, the ascent into the Fediverse and a technical log as and when needed.</p>
 
