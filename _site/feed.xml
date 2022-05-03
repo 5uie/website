@@ -1,14 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-03T12:39:05+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-03T18:29:09+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Creating a resume in multiple formats</title><link href="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html" rel="alternate" type="text/html" title="Creating a resume in multiple formats" /><published>2022-05-01T17:48:00+05:30</published><updated>2022-05-01T17:48:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/MultiFormatResume</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html"><![CDATA[Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed. 
 
-<p>Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.</p>
+Over the course of two decades, I have only changed the format of my resume twice. It makes sense to create a template for multiple formats and then keep updating the text to generate the files in different formats. 
 
-<h2 id="fix">Fix</h2>
+In my use case, I have a need for publications to show up and to have a logo of the organisation I am representing in some cases. Additionally, I need to share the resume in PDF and DOCX based on the uses. While it might be possible for some users to convert/print/export a DOCX file as a PDF, this workflow is not possible for users without access to good word processing software. LaTeX<label>[1](),[2]()</label> handles typesetting much better and supplies greater flexibility for customisation and therefore I chose this way. I did realise that having a web presence is important for folks now, therefore have added a HTML format too. 
 
-<p><em>Note of caution: This script will change SHA1s for all previous commits.</em></p>
+A [pandoc](https://pandoc.org/) based workflow seemed to work best for me. 
 
-<p>Create a shell script with +x permissions</p>
+## Workflow
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+1. Resume in markdown format
+2. Style files for HTML, LaTeX and DOCX
+3. References in a separate bib file
+4. Any added material (images, logos, etc.)
+5. Use pandoc to generate necessary outputs
+
+## Source
+
+The project is available on [Github](https://github.com/5uie/mfr_pandoc), please do feel free to use it and in case you have questions, you can always reach out.
+
+
+[1](https://towardsdatascience.com/why-should-you-learn-latex-or-at-least-give-it-a-try-8d0f3218b8e?gi=5bb8209352c9)
+[2](https://nitens.org/w/latex/)]]></content><author><name></name></author><category term="resume" /><category term="pandoc" /><category term="latex" /><summary type="html"><![CDATA[Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.]]></summary></entry><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[## Issue
+
+Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.
+
+## Fix
+
+*Note of caution: This script will change SHA1s for all previous commits.*
+
+Create a shell script with +x permissions
+
+```
+#!/bin/sh
  
 git filter-branch -f --env-filter '
  
@@ -33,70 +56,58 @@ export GIT_AUTHOR_EMAIL=$am
 export GIT_COMMITTER_NAME=$cn
 export GIT_COMMITTER_EMAIL=$cm
 '
-</code></pre></div></div>
+```
 
-<p>Once done, run the push command to update origin. Please note that this will override SHA1s irrevocably at origin</p>
+Once done, run the push command to update origin. Please note that this will override SHA1s irrevocably at origin
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin +main
-</code></pre></div></div>
+```
+git push origin +main
+```
 
-<p>Source(s): 
-<a href="https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc">1</a>
-<a href="https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails">2</a>
-<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
+Source(s): 
+[1](https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc)
+[2](https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails)
+[3](https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith)]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[## ToDo
 
-<ol>
-  <li><del>Webring integration <span style="font-size:0.8em;">(Dropped after evaluating needs)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
-  <li>Tildeverse documentation</li>
-  <li><del>Search plugins <span style="font-size:0.8em;">(Dropped, unable to find non JS version)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
-  <li><del>Sitemap links</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-  <li><del>W3C Validation</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-  <li><del>Re-organise About page</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-  <li><em>Clickable tags in blog listing page</em>
-    <ul>
-      <li><del>Finished listing tags in the blog page</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-      <li>Create clickable tags in blogroll</li>
-      <li>Create clickable tags in post</li>
-    </ul>
-  </li>
-  <li>Fix footer</li>
-  <li><del>Optimize page load times (not build times)</del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span>
-    <ul>
-      <li><del>https://mademistakes.com/articles/using-jekyll-2017/</del> <span style="font-size:0.8em;"><em>Revisit when site is larger</em></span></li>
-      <li><del>https://www.savaslabs.com/blog/optimizing-jekyll-performance-gulp<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
-      <li><del>https://github.com/envygeeks/jekyll-assets<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
-    </ul>
-  </li>
-  <li><del>Create readme and re-organise blog files</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-  <li>Port to Sourcehut</li>
-  <li>Handcraft stylesheet and low footprint version of Jekyll</li>
-  <li><del>Create usable feed</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-  <li>Increase content ratio</li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
+1. ~~Webring integration <span style="font-size:0.8em;">(Dropped after evaluating needs)</span>~~ <span style="font-size:0.6em;">*3rd May, 2022*</span>
+2. Tildeverse documentation
+3. ~~Search plugins <span style="font-size:0.8em;">(Dropped, unable to find non JS version)</span>~~ <span style="font-size:0.6em;">*3rd May, 2022*</span>
+4. ~~Sitemap links~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+5. ~~W3C Validation~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+6. ~~Re-organise About page~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+7. *Clickable tags in blog listing page*
+    - ~~Finished listing tags in the blog page~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+    - Create clickable tags in blogroll
+    - Create clickable tags in post
+8. Fix footer
+9. ~~Optimize page load times (not build times)~~ <span style="font-size:0.6em;">*3rd May, 2022*</span>
+	- ~~https://mademistakes.com/articles/using-jekyll-2017/~~ <span style="font-size:0.8em;">*Revisit when site is larger*</span>
+	- ~~https://www.savaslabs.com/blog/optimizing-jekyll-performance-gulp<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span>~~ <span style="font-size:0.6em;">*3rd May, 2022*</span>
+	- ~~https://github.com/envygeeks/jekyll-assets<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span>~~ <span style="font-size:0.6em;">*3rd May, 2022*</span>
+10. ~~Create readme and re-organise blog files~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+11. Port to Sourcehut
+12. Handcraft stylesheet and low footprint version of Jekyll
+13. ~~Create usable feed~~ <span style="font-size:0.6em;">*1st May, 2022*</span>
+14. Increase content ratio]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[## First post 
 
-<p>After much dithering, I have found the time to document my use of new tools, the ascent into the Fediverse and a technical log of this journey.</p>
+After much dithering, I have found the time to document my use of new tools, the ascent into the Fediverse and a technical log of this journey. 
 
-<p>This site has been crafted to ensure that pages are not unnecessarily clunky, hard to make, and incredibly complex with multiple scripts for each task. I have followed simple principles that allow text sites to load and render quickly, maintain consistency across different browsers and devices with ease. Some of the wonderful folk who have follow these ideas range from <a href="https://1mb.club/">1mb.club</a> to <a href="https://10kbclub.com">10kbclub.com</a>.</p>
+This site has been crafted to ensure that pages are not unnecessarily clunky, hard to make, and incredibly complex with multiple scripts for each task. I have followed simple principles that allow text sites to load and render quickly, maintain consistency across different browsers and devices with ease. Some of the wonderful folk who have follow these ideas range from [1mb.club](https://1mb.club/) to [10kbclub.com](https://10kbclub.com). 
 
-<p>This website has been setup using the idea of a <a href="https://john-doe.neocities.org/">single page template</a> as I do not foresee a large site at this point. The site is currently versioned on GitHub and then deployed through Netlify. In case the site reaches a target of <strong>100 posts</strong>, it may then merit a domain name and a move to a better templating system. It will continue to follow the ideas of a simpler, lighter, and better web.</p>
+This website has been setup using the idea of a [single page template](https://john-doe.neocities.org/) as I do not foresee a large site at this point. The site is currently versioned on GitHub and then deployed through Netlify. In case the site reaches a target of **100 posts**, it may then merit a domain name and a move to a better templating system. It will continue to follow the ideas of a simpler, lighter, and better web. 
 
-<h3 id="why-is-it-anonymous">Why is it anonymous?</h3>
-<p>My introduction to the internet was through Telnet, IRC, Listserv and BBS. I made a bunch of friends that who knew each other by their respective handles or aliases. I do not really recall being bullied or harassed myself or witnessing this happen to anyone else on these rooms and servers regularly. Yes, occasional incidents did occur, what was interesting was the way such problems were handled, and the community continued to function after it. This is an experiment to see if it is possible to continue to have a friendly and inclusive community that can exist while being anonymous (and therefore respecting the need for privacy).</p>
+### Why is it anonymous?
+My introduction to the internet was through Telnet, IRC, Listserv and BBS. I made a bunch of friends that who knew each other by their respective handles or aliases. I do not really recall being bullied or harassed myself or witnessing this happen to anyone else on these rooms and servers regularly. Yes, occasional incidents did occur, what was interesting was the way such problems were handled, and the community continued to function after it. This is an experiment to see if it is possible to continue to have a friendly and inclusive community that can exist while being anonymous (and therefore respecting the need for privacy). 
 
-<h3 id="social-web">Social web</h3>
-<p>My meandering path back into the world of technology has also meant I have now discovered federated social networks and a semblance of control/power for the users. While the idea of the power to host, moderate and curate all our interactions on our own is seductive, the cost to do so, in terms of time, effort and skills required seems to be high. This is an attempt to test these new protocols and methods of remaining connected with each other.</p>
+### Social web
+My meandering path back into the world of technology has also meant I have now discovered federated social networks and a semblance of control/power for the users. While the idea of the power to host, moderate and curate all our interactions on our own is seductive, the cost to do so, in terms of time, effort and skills required seems to be high. This is an attempt to test these new protocols and methods of remaining connected with each other. 
 
-<p><em>More to follow</em></p>
+*More to follow*
 
-<p>While I have only created this blog today, this has been in the works for a while now. I will try and put together a bunch of material that has led me to finally set this up,</p>
+While I have only created this blog today, this has been in the works for a while now. I will try and put together a bunch of material that has led me to finally set this up, 
 
-<ol>
-  <li>Why do we need a simpler, quicker web?
-    <ol>
-      <li>Lesser frameworks and scripts</li>
-      <li>The need for a connected web</li>
-    </ol>
-  </li>
-  <li>Need for decentralised social media</li>
-  <li>Eco-friendly and inclusive communities (as there are exhaustive resources available for privacy-first, cross-platform and open-source, I shall not be attempting to document it here.)</li>
-</ol>]]></content><author><name></name></author><category term="blog" /><category term="fediverse" /><category term="ramblings" /><category term="log" /><summary type="html"><![CDATA[First post]]></summary></entry></feed>
+1. Why do we need a simpler, quicker web?
+	1. Lesser frameworks and scripts
+	2. The need for a connected web
+2. Need for decentralised social media
+3. Eco-friendly and inclusive communities (as there are exhaustive resources available for privacy-first, cross-platform and open-source, I shall not be attempting to document it here.)]]></content><author><name></name></author><category term="blog" /><category term="fediverse" /><category term="ramblings" /><category term="log" /><summary type="html"><![CDATA[First post]]></summary></entry></feed>
