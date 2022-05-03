@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-02T15:13:31+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-03T12:39:05+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
 
 <p>Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.</p>
 
@@ -46,9 +46,9 @@ export GIT_COMMITTER_EMAIL=$cm
 <a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">ToDo on this blog</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="ToDo on this blog" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h2 id="todo">ToDo</h2>
 
 <ol>
-  <li>Webring integration</li>
+  <li><del>Webring integration <span style="font-size:0.8em;">(Dropped after evaluating needs)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
   <li>Tildeverse documentation</li>
-  <li>Search plugins</li>
+  <li><del>Search plugins <span style="font-size:0.8em;">(Dropped, unable to find non JS version)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
   <li><del>Sitemap links</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li><del>W3C Validation</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li><del>Re-organise About page</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
@@ -60,18 +60,19 @@ export GIT_COMMITTER_EMAIL=$cm
     </ul>
   </li>
   <li>Fix footer</li>
-  <li>Optimize page load times (not build times)
+  <li><del>Optimize page load times (not build times)</del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span>
     <ul>
-      <li>https://mademistakes.com/articles/using-jekyll-2017/</li>
-      <li>https://www.savaslabs.com/blog/optimizing-jekyll-performance-gulp</li>
-      <li>https://github.com/envygeeks/jekyll-assets</li>
+      <li><del>https://mademistakes.com/articles/using-jekyll-2017/</del> <span style="font-size:0.8em;"><em>Revisit when site is larger</em></span></li>
+      <li><del>https://www.savaslabs.com/blog/optimizing-jekyll-performance-gulp<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
+      <li><del>https://github.com/envygeeks/jekyll-assets<span style="font-size:0.8em;"> (Relevant portions used, rest is for JS, etc.)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
     </ul>
   </li>
   <li><del>Create readme and re-organise blog files</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li>Port to Sourcehut</li>
   <li>Handcraft stylesheet and low footprint version of Jekyll</li>
   <li><del>Create usable feed</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="webring" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
+  <li>Increase content ratio</li>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
 
 <p>After much dithering, I have found the time to document my use of new tools, the ascent into the Fediverse and a technical log of this journey.</p>
 
