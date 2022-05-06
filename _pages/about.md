@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about.html
 ---
 
 <h2>Co-ordinates:</h2>

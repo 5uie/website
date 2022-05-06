@@ -23,3 +23,6 @@ tramp
 
 # MacOSX
 .DS_Store
+
+# Backupfiles
+# .bak

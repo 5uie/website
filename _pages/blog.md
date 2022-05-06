@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Blog
+permalink: /blog.html
 ---
 <section id="blog">
     <h2>Articles</h2>
