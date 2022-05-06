@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box;
-  
+
   /* Color scheme */
-  
+
   --textcolor: #595959;
   --bgcolor: #f9f8f5;
   --highlight: #80002a;
@@ -49,35 +49,11 @@ body {
   }
 }
 
-/* ------- Sections ------- */
-
-section, div.post {
-  padding: calc(6em + 5vw) 5vw 8vw 5vw;
-  /* !! Everything below is needed !! */
-  display: none;
-  position: absolute;
-  top: 0;
-  min-height: 100vh;
-  width: 100%;
-  background: var(--bgcolor);
-}
-
-section:target { /* Show section */
-  display: block;
-}
-
-section#home { /* Show #home by default */
-  display: block;
-}
-
-div.post { /* Show post content by default since it loads a separate page */
-  display: block;
-}
 
 /* ------- Header ------- */
 
 header {
-  padding: 5vw 5vw 0 5vw;
+  padding: 5vw 5vw 1vw 0;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -85,18 +61,32 @@ header {
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 2em;
   flex: 1;
   white-space: nowrap;
-  padding: 0 20vw .5em 0;
+  padding: 0 20vw 0 0;
 }
 
 nav a:not(:last-of-type) {
   margin-right: 1.5vw;
 }
 
-/* ------- Footer -------- */
 
+/* ------- Footer ------- */
+
+footer {
+  padding: 2vw 5vw 1vw 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  font-size: .6em;
+  justify-content: center;
+}
+
+nav a:not(:last-of-type) {
+  margin-right: 1.5vw;
+}
 
 /* ------- General ------- */
 
@@ -114,14 +104,20 @@ section h1 {
   margin: 0 0 1em 0;
 }
 
-h2, h3, h4 {
+h2 { 
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 1.6em 0 .6em 0;
+}
+
+h3, h4 {
   font-size: 1em;
   font-weight: 600;
   margin: 1.6em 0 .6em 0;
 }
 
 p, ul, ol, article {
-  max-width: 60ch; /* Limit line-length to 60 characters */
+  max-width: 96ch; /* Limit line-length to 60 characters */
   margin-bottom: .6em;
 }
 
@@ -476,3 +472,4 @@ article time {
   label + input + small:after { content: "]"; }
     
 }
+

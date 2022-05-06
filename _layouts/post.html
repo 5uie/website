@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
 ---
 
 <div class="post">
-    <h1>{{ page.title }}</h1>
+    <h2>{{ page.title }}</h2>
     <em>{{ page.date | date: "%e %B, %Y" }}</em><br>
     {%- if page.modified -%}<span class="modified_date"> Last updated: {{ page.modified | date: "%e %B, %Y" }} at {{ page.modified | date: "%R" }}</span>{%- endif -%}<br>
     <span class="tags">{{ page.tags | sort | join: ", " }}</span>

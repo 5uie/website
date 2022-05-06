@@ -1,0 +1,19 @@
+email:
+  id: 'Send e-mail'
+  href: '&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#53;&#117;&#105;&#101;&#49;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;'
+  title: 'Email'
+
+fosstodon:
+  id: '@5uie1@fosstodon.org'
+  href: 'https://fosstodon.org/@5uie1'
+  title: 'Fosstodon'
+
+xmpp:
+  id: 'fui@jabb3r.org'
+  href: 'xmpp:fui@jabb3r.org'
+  title: 'XMPP'
+
+matrix:
+  id: '@5uie1:matrix.org'
+  href: 'https://matrix.to/#/@5uie1:matrix.org'
+  title: 'Matrix'
