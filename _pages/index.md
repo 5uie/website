@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: page 
+layout: page
 ---
 
 
@@ -15,5 +15,3 @@ Documenting the joy of a better web with these five ideas,
 - An inclusive community
 
 You can read about this [journey](blog.html) and find details to [contact me](about.html).
-
-

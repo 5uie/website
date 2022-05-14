@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-07T02:07:19+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Creating a resume in multiple formats</title><link href="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html" rel="alternate" type="text/html" title="Creating a resume in multiple formats" /><published>2022-05-01T17:48:00+05:30</published><updated>2022-05-01T17:48:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/MultiFormatResume</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html"><![CDATA[<p>Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-05-14T22:03:18+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Finding an alternative to del.icio.us</title><link href="https://5uie1.netlify.com/2022/05/14/Bookmarks.html" rel="alternate" type="text/html" title="Finding an alternative to del.icio.us" /><published>2022-05-14T20:38:00+05:30</published><updated>2022-05-14T20:38:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/14/Bookmarks</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/14/Bookmarks.html"><![CDATA[<p><a href="https://del.icio.us/">Delicious</a> was a mark of doing one thing and
+only one thing, but doing it well <em>(I have deliberately linked to it
+here, an homage to a service that was a joy to use)</em>. Sites such as
+StumbleUpon, Diigo were a call back to the times when discovering
+unconnected websites without having to give up privacy. Almost
+everyone I know had a bookmarklet, a plugin or a custom setup to post
+to del.icio.us. It was a service, that was rich and led to a number of
+use cases. Almost anyone who wanted to learn text analysis and
+information retrieval would use del.icio.us as a data set after having
+been IP-banned from Wikipedia.</p>
+
+<p>As is the case, the transition of del.icio.us to Yahoo! led to a
+number of issues, breaking workflows that people had and eventually
+being so buggy that it led to a number of alternatives and open-source
+clones. The simplicity of the service also did mean that there were a
+number of PHP, Perl and ASPX clones that survived beyond this phase of
+multiple ownership transfers (AVOS being the disaster that ended
+it). This transition between multiple owners also meant the identity
+of the service was constantly under question, the focus of the service
+always being compared with other budding services. It is also important
+to note that this transition meant a steady stream of exits of users,
+some who self-hosted, some who transitioned to clones, some who
+started using paid services and  many who relied on alternatives that were
+local storage (synced across devices, etc.). The death of the service
+and the rise of “likes” based model of links or site recommendation is
+an unsurprising co-occurrence. A simple act of bookmarking links of
+note for personal use had now morphed  into a beastly game of
+one-upmanship and sale of personal data.</p>
+
+<p>I’ve tried multiple services since the demise of del.icio.us, but am
+yet to find a viable alternative. I haven’t been able to stick with
+each workflow for more than a couple of months. I have finally found
+an alternative that works for me now. I use Emacs (org-mode) with
+Firefox to store my bookmarks locally and then convert them to a
+simple YAML set that is then displayed on this site. The links are
+available on this <a href="bookmarks.html">site</a>. And here’s to hoping this
+lasts for a longer time!</p>]]></content><author><name></name></author><category term="bookmarks" /><category term="emacs" /><category term="yaml" /><category term="delicious" /><summary type="html"><![CDATA[Delicious was a mark of doing one thing and only one thing, but doing it well (I have deliberately linked to it here, an homage to a service that was a joy to use). Sites such as StumbleUpon, Diigo were a call back to the times when discovering unconnected websites without having to give up privacy. Almost everyone I know had a bookmarklet, a plugin or a custom setup to post to del.icio.us. It was a service, that was rich and led to a number of use cases. Almost anyone who wanted to learn text analysis and information retrieval would use del.icio.us as a data set after having been IP-banned from Wikipedia.]]></summary></entry><entry><title type="html">Creating a resume in multiple formats</title><link href="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html" rel="alternate" type="text/html" title="Creating a resume in multiple formats" /><published>2022-05-01T17:48:00+05:30</published><updated>2022-05-01T17:48:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/MultiFormatResume</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html"><![CDATA[<p>Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.</p>
 
 <p>Over the course of two decades, I have only changed the format of my resume twice. It makes sense to create a template for multiple formats and then keep updating the text to generate the files in different formats.</p>
 
@@ -66,23 +102,23 @@ export GIT_COMMITTER_EMAIL=$cm
 <p>Source(s): 
 <a href="https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc">1</a>
 <a href="https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails">2</a>
-<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">List of changes and upkeep for this website</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="List of changes and upkeep for this website" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h3 id="todo">ToDo</h3>
+<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">List of changes and upkeep for this website</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="List of changes and upkeep for this website" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h3 id="to-do">To Do</h3>
 
 <ol>
   <li><del>Webring integration <span style="font-size:0.8em;">(Dropped after evaluating needs)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
   <li>Tildeverse documentation</li>
-  <li><del>Search plugins <span style="font-size:0.8em;">(Dropped, unable to find non JS version)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
+  <li><del>Search plugins</del> <span style="font-size:0.6em;"><em>7th May, 2022</em></span></li>
   <li><del>Sitemap links</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li><del>W3C Validation</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li><del>Re-organise About page</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li><em>Clickable tags in blog listing page</em>
     <ul>
       <li><del>Finished listing tags in the blog page</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
-      <li>Create clickable tags in blogroll</li>
+      <li>Create clickable tags in list of tags</li>
       <li>Create clickable tags in post</li>
     </ul>
   </li>
-  <li>Fix footer</li>
+  <li><del>Fix footer</del> <span style="font-size:0.6em;"><em>14th May, 2022</em></span></li>
   <li><del>Optimize page load times (not build times)</del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span>
     <ul>
       <li><del>https://mademistakes.com/articles/using-jekyll-2017/</del> <span style="font-size:0.8em;"><em>Revisit when site is larger</em></span></li>
@@ -96,7 +132,7 @@ export GIT_COMMITTER_EMAIL=$cm
   <li><del>Create usable feed</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li>Increase content ratio</li>
   <li>Style the RSS Feed</li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[ToDo]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[To Do]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
 
 <p>After much dithering, I have found the time to document my use of new tools, the ascent into the Fediverse and a technical log of this journey.</p>
 
