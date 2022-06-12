@@ -2,6 +2,7 @@
 layout: post
 title:  "Framework has finally arrived!"
 date:   2022-06-05 19:57:10 +0530
+modified: 2022-06-12 16:20:20 +530
 tags: framework repairability diy open sustainability linux slackware apple
 blurb: And so it begins with Framework and Linux
 ---
@@ -19,17 +20,17 @@ Hardware](https://www.tomsguide.com/reviews/framework-laptop-review-the-anti-mac
 [CNET](https://www.cnet.com/tech/computing/framework-laptop-review-a-functional-and-futureproof-13-inches/),
 and
 [iFixit](https://www.ifixit.com/News/51614/framework-laptop-teardown-10-10-but-is-it-perfect). This
-coincided well with my search for a new laptop. The 2015 MBP 13 inch
+coincided well with my search for a new laptop. The 2015 MBP 13-inch
 Retina had really served me well for a while. It is a laptop that
 introduced me to amazing battery power and the ability to work on a
 portable system that did not require kid gloves. However, after five
 years, the usual battery bulge and failure of speakers meant that it
-became a challenge to continue with the laptop. While a number of
+became a challenge to continue with the laptop. While several
 parts are available outside the "Apple Service Programme", sourcing
 them, testing their quality and negotiating the use of the right parts
 became a challenge. Additional challenges were posed as the new OS
 upgrades that Apple released seemed to constantly [slow down](https://arstechnica.com/gadgets/2020/11/macos-big-sur-launch-appears-to-cause-temporary-slowdown-in-even-non-big-sur-macs/) the
-system. This in itself isn't very surprising, my experience has been
+system. This isn't very surprising; my experience has been
 that updates from Apple have continued to help improve the experience
 (barring the minor hiccup due to my tooling). However, every couple of
 updates have also meant that the demands on the hardware
@@ -63,13 +64,13 @@ While transitioning out of using an Apple device, I was willing to,
 
 ## First Impressions
 
-That being said, given the limited time that I have spend on the
+Given the limited time that I have spent on the
 Framework Laptop, I am impressed by,
 * Build quality: Serious thought has gone into creating the laptop for
-  long-term usage. A number of small portions (the additional screws,
-  captive screws, the hinge stability, etc.) are a treat to encounter
+  long-term usage. A few details that caught my eye (the additional screws,
+  captive screws, the hinge stability, etc.), and are a treat to encounter
   the first time.
-* The ease of assembling: The packaging of a screw driver, presence of
+* The ease of assembling: The packaging of a screwdriver, presence of
   QR codes everywhere, use of standard screws, the availability of
   easily accessible tutorials and videos (many of them from the
   community) makes setting up the process a breeze.

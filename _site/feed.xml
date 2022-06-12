@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://5uie1.netlify.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://5uie1.netlify.com/" rel="alternate" type="text/html" /><updated>2022-06-05T20:53:53+05:30</updated><id>https://5uie1.netlify.com/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Framework has finally arrived!</title><link href="https://5uie1.netlify.com/2022/06/05/2022-06-22-FrameworkArrived.html" rel="alternate" type="text/html" title="Framework has finally arrived!" /><published>2022-06-05T19:57:10+05:30</published><updated>2022-06-05T19:57:10+05:30</updated><id>https://5uie1.netlify.com/2022/06/05/2022-06-22-FrameworkArrived</id><content type="html" xml:base="https://5uie1.netlify.com/2022/06/05/2022-06-22-FrameworkArrived.html"><![CDATA[<h2 id="framework-laptop">Framework Laptop</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-12T19:35:34+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Five Useful Ideas</title><subtitle>A website to chronicle my jounrey back into the free and open source world </subtitle><entry><title type="html">Setting up the framework laptop</title><link href="http://localhost:4000/2022/06/12/FrameworkSetup.html" rel="alternate" type="text/html" title="Setting up the framework laptop" /><published>2022-06-12T15:07:10+05:30</published><updated>2022-06-12T15:07:10+05:30</updated><id>http://localhost:4000/2022/06/12/FrameworkSetup</id><content type="html" xml:base="http://localhost:4000/2022/06/12/FrameworkSetup.html"><![CDATA[<h2 id="framework-laptop">Framework Laptop</h2>
+
+<p>In the <a href="/2022/06/05/FrameworkArrived.html">previous post</a>, I had very quickly written about my need for a new laptop and the reasoning behind my choice to buy <a href="https://frame.work/">Framework Laptop</a>. There are several posts and videos available online, please do check them if you’d like to know more about an unboxing experience, a detailed review, or choice of model for the laptop. In this post, I will only be attempting to document the process I followed in order to setup the computer. The post will cover,</p>
+<ul>
+  <li>Choice hardware
+    <ul>
+      <li>Mainboard</li>
+      <li>SSD</li>
+      <li>RAM</li>
+      <li>Power adapter</li>
+    </ul>
+  </li>
+  <li>Setting up Linux
+    <ul>
+      <li>Choice of distribution</li>
+      <li>How-Tos</li>
+      <li>Gotchas</li>
+    </ul>
+  </li>
+  <li>Wrapping up</li>
+  <li>Setting up a VM with Windows 11 (for the obligatory requirements all of us have)
+    <h2 id="choice-of-hardware">Choice of Hardware</h2>
+    <p>Given the possibilities with the laptop, I decided to buy the DIY version of the Framework Laptop</p>
+    <ol>
+      <li>Processer: At the time that I placed the order, DIY version of the laptop was only available in the 11th generation of Intel Processors. The two variants available that were of interest to me were the i5-1135G7 and i7-1165G7. While the i7 did have marginally better hardware specifications, the power efficiency of the i5 is much better. Due to my use case and that there was a USD 300 price difference, I decided to buy the i5 variant of the laptop.</li>
+      <li>SSD: I had four choices for RAM, Samsung Pro 980, WD Black 980, WD Black 770 and the SK Hynix P31 Gold (the SK Hynix P41 Platinum wasn’t released yet). As I was moving from an older NVME SSD (first generation), I was keen to see the differences in the newer generation of SSDs. I did finally choose the WD Black 850 as the SK Hynix P31 Gold wasn’t available in my geographic region due to shipping shortages.</li>
+      <li>RAM: Framework has a list of <a href="https://knowledgebase.frame.work/what-memory-dram-parts-are-compatible-with-the-framework-laptop-ry_jbS8Ru">compatible RAM</a> on their very useful knowledge base. The key is using non XMP modules that run natively at DDR403200 speed. I tried Samsung, Hynix and Corsair 16GBx2 dual ranked modules (for a total of 32GB) and unfortunately, none of these worked right from the non-native speeds, presence of a heat sink on the RAM and corrupted RAM modules. I eventually settled on a 32 GB (16GBx2) from Crucial that is in the list that Framework has provided.</li>
+      <li>Power adapter: The DIY nature of this laptop also means that you can use any charger that you already have (as long as it is type-C) and is rated 65W and above. The Framework forum is filled with experiences from people who decided to buy much cheaper travel adapters and at this point it seems to a hit-and-a-miss experience. I was looking to buy a Lenovo or Asus 100W charger (I do not mind the additional weight of the brick and do not need multiple ports on it), as I can then not worry about under-charging or power-drain when I connect multiple accessories to the laptop. Once again, due to availability in my geographic region I have settled on the Asus 100W type-C charger.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="setting-up-linux">Setting up Linux</h2>
+
+<p>My original setup as planned was to be dual booting with UEFI enabled and secure boot disabled for Windows 11 and one Linux distribution. The challenge with this setup did mean that I would not be able to take advantage of the wake-up possibilities offered by Windows (details available as usual on <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows">Arch Wiki</a>). The <a href="https://guides.frame.work/c/Framework_Laptop#Section_How-to">guides section</a> by the Framework team documents the OOTB experience for Fedora, Manjaro, Pop!, Ubuntu and Windows 10 &amp; 11. The <a href="https://community.frame.work/c/framework-laptop/linux/91">Linux section</a> on the community forum has users documenting their experiences with other distributions such as Arch, Linux Mint, Slackware, Elementary OS and the newly created NixOS among others. Given the new found power of RAM (I couldn’t run even a single DE based Linux on a VM on my MBP due to the limitations of available memory), I decided to abandon dual booting and use Linux as the daily driver. I could run Windows 11 on a VM for all the tasks that I require it for (limited statutory obligations that do not have Linux alternatives but do have MacOS alternatives).</p>
+
+<h3 id="choice-of-distribution">Choice of distribution</h3>
+
+<p>So, it did boil down to which Linux distribution I would pick. The criteria for the choice of operating system were simple,</p>
+<ol>
+  <li>How well does it play with Framework Laptop? As it is with all laptops, the biggest challenge with any *nix-based system is the availability of drivers, support for video acceleration, encryption, tweaking BIOS and power tuning. In this case, all major distributions seem to work well with Framework based on the discussions in the community forum and the support provided by Framework themselves.</li>
+  <li>Stability vis-à-vis bleeding-edge: I have always erred on the side of stability if it has a fully functioning driver set for my working machine. While Arch seemed to have a thriving community for Framework, this did mean that I had my options as Debian based OSes, Fedora or Slackware.</li>
+  <li>Derivatives: I do appreciate the need for Manjaro, Ubuntu, PopOS, Mint, etc. and the communities they have built. But I prefer to stick to the original distributions as I do not need the additional layers or support provided by these distributions.</li>
+  <li>Package Management: I am a stickler for native running, I do not mind compiling from source or doing dependency checking myself or using dependency-checking scripts to help me. But do not appreciate the bloat provided by Flatpacks and Snaps now.</li>
+  <li>Systemd vs Init: As mentioned before, I was using to init-based systems the last time I was using Linux and am yet to read and understand system based on system. Due to familiarity with these possibilities, it did mean that I stick with init based systems.</li>
+  <li>Urgency: The MBP has a battery bulge that needs urgent attention, so I would need a system that has a decent enough OOTB experience, but I can use as a daily driver with all the tools that I need. Which would mean I need an experience that I am comfortable with and can setup to run quickly.</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Linux</strong></th>
+      <th style="text-align: center"><strong>Drivers</strong></th>
+      <th><strong>Stability</strong></th>
+      <th><strong>Derivative</strong></th>
+      <th><strong>Packages</strong></th>
+      <th><strong>systemd vs init</strong></th>
+      <th style="text-align: center"><strong>Happiness</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Arch</strong></td>
+      <td style="text-align: center">High</td>
+      <td>BE</td>
+      <td>No</td>
+      <td>XXX</td>
+      <td>systemd</td>
+      <td style="text-align: center">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Manjaro</strong></td>
+      <td style="text-align: center">High</td>
+      <td>BE</td>
+      <td>Yes</td>
+      <td>XXX</td>
+      <td>systemd</td>
+      <td style="text-align: center">No</td>
+    </tr>
+    <tr>
+      <td><strong>Mint</strong></td>
+      <td style="text-align: center">High</td>
+      <td>Stability</td>
+      <td>Yes</td>
+      <td>XX</td>
+      <td>systemd</td>
+      <td style="text-align: center">No</td>
+    </tr>
+    <tr>
+      <td><strong>Pop!OS</strong></td>
+      <td style="text-align: center">High</td>
+      <td>BE</td>
+      <td>Yes</td>
+      <td>XX</td>
+      <td>systemd</td>
+      <td style="text-align: center">No</td>
+    </tr>
+    <tr>
+      <td><strong>Ubuntu</strong></td>
+      <td style="text-align: center">High</td>
+      <td>Stability</td>
+      <td>Yes</td>
+      <td>X</td>
+      <td>systemd</td>
+      <td style="text-align: center">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Debian</strong></td>
+      <td style="text-align: center">High</td>
+      <td>Stability</td>
+      <td>No</td>
+      <td>XX</td>
+      <td>systemd</td>
+      <td style="text-align: center">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>NixOS</strong></td>
+      <td style="text-align: center">High</td>
+      <td>BE</td>
+      <td>No</td>
+      <td>X</td>
+      <td>systemd</td>
+      <td style="text-align: center">No</td>
+    </tr>
+    <tr>
+      <td><strong>Fedora</strong></td>
+      <td style="text-align: center">High</td>
+      <td>Stability</td>
+      <td>Not really</td>
+      <td>XXX</td>
+      <td>systemd</td>
+      <td style="text-align: center">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Slackware</strong></td>
+      <td style="text-align: center">High</td>
+      <td>Stability</td>
+      <td>No</td>
+      <td>XXX</td>
+      <td>init</td>
+      <td style="text-align: center">Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+And the winner is (obviously, by biased ranking) is Slackware. The freshly released Slackware 15 to boot!</p>
+
+<h3 id="how-tos">How-Tos</h3>
+<p>The only setup guide that I could find for installing Slackware 15 on the Framework Laptop was by Ryan Northrup on his <a href="https://yellowapple.us/2022/02/07/slackware-on-framework.html">website</a>. I decided to set it up as a simple EXT4 partition system for UEFI boot along with a 64GB swap space. The last time I used Linux I was at ext3, the addition of LUKS and other encryption seems fairly tempting, but I did not want to experiment with it now. I followed the guide and it worked well for me.</p>
+
+<h3 id="gotchas">Gotchas</h3>
+<ol>
+  <li>Updating kernel: When you first update your kernel, please do make sure to you update initrd. If in case you miss this, you might get a “No kernel modules found for Linux X.X.XX”. In case you get this error, please follow the guide at <a href="https://docs.slackware.com/howtos:slackware_admin:systemupgrade">Slackware docs</a>, and what worked for me was the details provided by users on <a href="https://www.linuxquestions.org/questions/slackware-14/upgrade-gone-wrong-no-kernel-modules-found-4175685660/#post6187920">LinuxQestions</a>.</li>
+  <li>Enabling multilib: In case you need multilib support for Steam, Skype or VirtualBox, please do follow the wonderful guide at <a href="https://docs.slackware.com/slackware:multilib">Slackware Docs</a>.</li>
+  <li>Wayland vs X11: Please note that Wayland is supported by default in Slackware (for KDE). However, a number of applications break and do not work well on Slackware. A consistent challenge for me was the overheating and power drain when I used video calling applications (Zoom, Discord, etc.). Most of these issues were resolved when I switched to xorg.</li>
+</ol>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>What is currently working for me?</p>
+<ul>
+  <li>Sleep: Setup “nvme.noacpi=1” kernel parameter for <a href="https://community.frame.work/t/linux-battery-life-tuning/6665/235">greater performance</a></li>
+  <li>Fingerprint reader: Install frpintd from SBO</li>
+  <li>Video and Audio: Hard cut off buttons while in calls</li>
+  <li>Bluetooth: Works well without audio drop-off after tweaking pipewire a bit</li>
+  <li>WiFi: Works well and connects to all networks, speed however is an issue (kernel 5.15.38)</li>
+  <li>Audio jack: Works without any glitches and issues.</li>
+</ul>]]></content><author><name></name></author><category term="framework" /><category term="repairability" /><category term="diy" /><category term="open" /><category term="sustainability" /><category term="linux" /><category term="slackware" /><category term="apple" /><summary type="html"><![CDATA[Framework Laptop]]></summary></entry><entry><title type="html">Framework has finally arrived!</title><link href="http://localhost:4000/2022/06/05/FrameworkArrived.html" rel="alternate" type="text/html" title="Framework has finally arrived!" /><published>2022-06-05T19:57:10+05:30</published><updated>2022-06-05T19:57:10+05:30</updated><id>http://localhost:4000/2022/06/05/FrameworkArrived</id><content type="html" xml:base="http://localhost:4000/2022/06/05/FrameworkArrived.html"><![CDATA[<h2 id="framework-laptop">Framework Laptop</h2>
 
 <p><img src="/images/Slack_FW_5uie1.png" alt="" /></p>
 
@@ -11,17 +178,17 @@ Hardware</a>,
 <a href="https://www.cnet.com/tech/computing/framework-laptop-review-a-functional-and-futureproof-13-inches/">CNET</a>,
 and
 <a href="https://www.ifixit.com/News/51614/framework-laptop-teardown-10-10-but-is-it-perfect">iFixit</a>. This
-coincided well with my search for a new laptop. The 2015 MBP 13 inch
+coincided well with my search for a new laptop. The 2015 MBP 13-inch
 Retina had really served me well for a while. It is a laptop that
 introduced me to amazing battery power and the ability to work on a
 portable system that did not require kid gloves. However, after five
 years, the usual battery bulge and failure of speakers meant that it
-became a challenge to continue with the laptop. While a number of
+became a challenge to continue with the laptop. While several
 parts are available outside the “Apple Service Programme”, sourcing
 them, testing their quality and negotiating the use of the right parts
 became a challenge. Additional challenges were posed as the new OS
 upgrades that Apple released seemed to constantly <a href="https://arstechnica.com/gadgets/2020/11/macos-big-sur-launch-appears-to-cause-temporary-slowdown-in-even-non-big-sur-macs/">slow down</a> the
-system. This in itself isn’t very surprising, my experience has been
+system. This isn’t very surprising; my experience has been
 that updates from Apple have continued to help improve the experience
 (barring the minor hiccup due to my tooling). However, every couple of
 updates have also meant that the demands on the hardware
@@ -59,14 +226,14 @@ required</li>
 
 <h2 id="first-impressions">First Impressions</h2>
 
-<p>That being said, given the limited time that I have spend on the
+<p>Given the limited time that I have spent on the
 Framework Laptop, I am impressed by,</p>
 <ul>
   <li>Build quality: Serious thought has gone into creating the laptop for
-long-term usage. A number of small portions (the additional screws,
-captive screws, the hinge stability, etc.) are a treat to encounter
+long-term usage. A few details that caught my eye (the additional screws,
+captive screws, the hinge stability, etc.), and are a treat to encounter
 the first time.</li>
-  <li>The ease of assembling: The packaging of a screw driver, presence of
+  <li>The ease of assembling: The packaging of a screwdriver, presence of
 QR codes everywhere, use of standard screws, the availability of
 easily accessible tutorials and videos (many of them from the
 community) makes setting up the process a breeze.</li>
@@ -94,7 +261,7 @@ a few quick thinks that I will post about shortly,</p>
   </li>
   <li>Setting up a VM with Windows 11 (for the obligatory requirements all
 of us have)</li>
-</ul>]]></content><author><name></name></author><category term="framework" /><category term="repairability" /><category term="diy" /><category term="open" /><category term="sustainability" /><category term="linux" /><category term="slackware" /><category term="apple" /><summary type="html"><![CDATA[Framework Laptop]]></summary></entry><entry><title type="html">Finding an alternative to del.icio.us</title><link href="https://5uie1.netlify.com/2022/05/14/Bookmarks.html" rel="alternate" type="text/html" title="Finding an alternative to del.icio.us" /><published>2022-05-14T20:38:00+05:30</published><updated>2022-05-14T20:38:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/14/Bookmarks</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/14/Bookmarks.html"><![CDATA[<p><a href="https://del.icio.us/">Delicious</a> was a mark of doing one thing and
+</ul>]]></content><author><name></name></author><category term="framework" /><category term="repairability" /><category term="diy" /><category term="open" /><category term="sustainability" /><category term="linux" /><category term="slackware" /><category term="apple" /><summary type="html"><![CDATA[Framework Laptop]]></summary></entry><entry><title type="html">Finding an alternative to del.icio.us</title><link href="http://localhost:4000/2022/05/14/Bookmarks.html" rel="alternate" type="text/html" title="Finding an alternative to del.icio.us" /><published>2022-05-14T20:38:00+05:30</published><updated>2022-05-14T20:38:00+05:30</updated><id>http://localhost:4000/2022/05/14/Bookmarks</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Bookmarks.html"><![CDATA[<p><a href="https://del.icio.us/">Delicious</a> was a mark of doing one thing and
 only one thing, but doing it well <em>(I have deliberately linked to it
 here, an homage to a service that was a joy to use)</em>. Sites such as
 StumbleUpon, Diigo were a call back to the times when discovering
@@ -130,7 +297,7 @@ an alternative that works for me now. I use Emacs (org-mode) with
 Firefox to store my bookmarks locally and then convert them to a
 simple YAML set that is then displayed on this site. The links are
 available on this <a href="bookmarks.html">site</a>. And here’s to hoping this
-lasts for a longer time!</p>]]></content><author><name></name></author><category term="bookmarks" /><category term="emacs" /><category term="yaml" /><category term="delicious" /><summary type="html"><![CDATA[Delicious was a mark of doing one thing and only one thing, but doing it well (I have deliberately linked to it here, an homage to a service that was a joy to use). Sites such as StumbleUpon, Diigo were a call back to the times when discovering unconnected websites without having to give up privacy. Almost everyone I know had a bookmarklet, a plugin or a custom setup to post to del.icio.us. It was a service, that was rich and led to a number of use cases. Almost anyone who wanted to learn text analysis and information retrieval would use del.icio.us as a data set after having been IP-banned from Wikipedia.]]></summary></entry><entry><title type="html">Creating a resume in multiple formats</title><link href="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html" rel="alternate" type="text/html" title="Creating a resume in multiple formats" /><published>2022-05-01T17:48:00+05:30</published><updated>2022-05-01T17:48:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/MultiFormatResume</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/MultiFormatResume.html"><![CDATA[<p>Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.</p>
+lasts for a longer time!</p>]]></content><author><name></name></author><category term="bookmarks" /><category term="emacs" /><category term="yaml" /><category term="delicious" /><summary type="html"><![CDATA[Delicious was a mark of doing one thing and only one thing, but doing it well (I have deliberately linked to it here, an homage to a service that was a joy to use). Sites such as StumbleUpon, Diigo were a call back to the times when discovering unconnected websites without having to give up privacy. Almost everyone I know had a bookmarklet, a plugin or a custom setup to post to del.icio.us. It was a service, that was rich and led to a number of use cases. Almost anyone who wanted to learn text analysis and information retrieval would use del.icio.us as a data set after having been IP-banned from Wikipedia.]]></summary></entry><entry><title type="html">Creating a resume in multiple formats</title><link href="http://localhost:4000/2022/05/01/MultiFormatResume.html" rel="alternate" type="text/html" title="Creating a resume in multiple formats" /><published>2022-05-01T17:48:00+05:30</published><updated>2022-05-01T17:48:00+05:30</updated><id>http://localhost:4000/2022/05/01/MultiFormatResume</id><content type="html" xml:base="http://localhost:4000/2022/05/01/MultiFormatResume.html"><![CDATA[<p>Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.</p>
 
 <p>Over the course of two decades, I have only changed the format of my resume twice. It makes sense to create a template for multiple formats and then keep updating the text to generate the files in different formats.</p>
 
@@ -153,7 +320,7 @@ lasts for a longer time!</p>]]></content><author><name></name></author><category
 <p>The project is available on <a href="https://github.com/5uie/mfr_pandoc">Github</a>, please do feel free to use it and in case you have questions, you can always reach out.</p>
 
 <p><a href="https://towardsdatascience.com/why-should-you-learn-latex-or-at-least-give-it-a-try-8d0f3218b8e?gi=5bb8209352c9">1</a>
-<a href="https://nitens.org/w/latex/">2</a></p>]]></content><author><name></name></author><category term="resume" /><category term="pandoc" /><category term="latex" /><summary type="html"><![CDATA[Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.]]></summary></entry><entry><title type="html">Fixing details of committer on Git</title><link href="https://5uie1.netlify.com/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/GitChangeName</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
+<a href="https://nitens.org/w/latex/">2</a></p>]]></content><author><name></name></author><category term="resume" /><category term="pandoc" /><category term="latex" /><summary type="html"><![CDATA[Maintaining and updating a resume is often an uphill task. In modern times, due to the demand and needs from different resume processing systems, multiple formats are often needed.]]></summary></entry><entry><title type="html">Fixing details of committer on Git</title><link href="http://localhost:4000/2022/05/01/GitChangeName.html" rel="alternate" type="text/html" title="Fixing details of committer on Git" /><published>2022-05-01T04:21:00+05:30</published><updated>2022-05-01T04:21:00+05:30</updated><id>http://localhost:4000/2022/05/01/GitChangeName</id><content type="html" xml:base="http://localhost:4000/2022/05/01/GitChangeName.html"><![CDATA[<h2 id="issue">Issue</h2>
 
 <p>Problem with wrong names for committer or author on git for a number of commits? This can be fixed either by git rebase or by git filter-branch.</p>
 
@@ -198,7 +365,7 @@ export GIT_COMMITTER_EMAIL=$cm
 <p>Source(s): 
 <a href="https://gist.github.com/ecentinela/199670/7fdb39cbfc2890820c8e8ef64e1184716a24f1cc">1</a>
 <a href="https://stackoverflow.com/questions/2919878/git-rewrite-previous-commit-usernames-and-emails">2</a>
-<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">List of changes and upkeep for this website</title><link href="https://5uie1.netlify.com/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="List of changes and upkeep for this website" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Blog_todo</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Blog_todo.html"><![CDATA[<h3 id="to-do">To Do</h3>
+<a href="https://stackoverflow.com/questions/68384486/how-do-i-properly-change-the-author-of-a-commit-for-the-past-few-commits-in-gith">3</a></p>]]></content><author><name></name></author><category term="git" /><category term="commit" /><category term="authorship" /><summary type="html"><![CDATA[Issue]]></summary></entry><entry><title type="html">List of changes and upkeep for this website</title><link href="http://localhost:4000/2022/05/01/Blog_todo.html" rel="alternate" type="text/html" title="List of changes and upkeep for this website" /><published>2022-05-01T02:07:00+05:30</published><updated>2022-05-01T02:07:00+05:30</updated><id>http://localhost:4000/2022/05/01/Blog_todo</id><content type="html" xml:base="http://localhost:4000/2022/05/01/Blog_todo.html"><![CDATA[<h3 id="to-do">To Do</h3>
 
 <ol>
   <li><del>Webring integration <span style="font-size:0.8em;">(Dropped after evaluating needs)</span></del> <span style="font-size:0.6em;"><em>3rd May, 2022</em></span></li>
@@ -228,7 +395,7 @@ export GIT_COMMITTER_EMAIL=$cm
   <li><del>Create usable feed</del> <span style="font-size:0.6em;"><em>1st May, 2022</em></span></li>
   <li>Increase content ratio</li>
   <li>Style the RSS Feed</li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[To Do]]></summary></entry><entry><title type="html">Ahoy!</title><link href="https://5uie1.netlify.com/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>https://5uie1.netlify.com/2022/05/01/Ahoy</id><content type="html" xml:base="https://5uie1.netlify.com/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="todo" /><category term="blog" /><summary type="html"><![CDATA[To Do]]></summary></entry><entry><title type="html">Ahoy!</title><link href="http://localhost:4000/2022/05/01/Ahoy.html" rel="alternate" type="text/html" title="Ahoy!" /><published>2022-05-01T01:07:00+05:30</published><updated>2022-05-01T01:07:00+05:30</updated><id>http://localhost:4000/2022/05/01/Ahoy</id><content type="html" xml:base="http://localhost:4000/2022/05/01/Ahoy.html"><![CDATA[<h2 id="first-post">First post</h2>
 
 <p>After much dithering, I have found the time to document my use of new tools, the ascent into the Fediverse and a technical log of this journey.</p>
 
